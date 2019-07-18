@@ -37,6 +37,22 @@ class App extends Component {
         important: true,
         active: true,
         finishDate: null
+      },
+      {
+        id: 4,
+        text: "zagrac w cos",
+        date: "2019 - 10 - 16",
+        important: true,
+        active: true,
+        finishDate: null
+      },
+      {
+        id: 5,
+        text: "zagrac w cos",
+        date: "2019 - 10 - 16",
+        important: true,
+        active: true,
+        finishDate: null
       }
     ]
   };
