@@ -2,12 +2,22 @@ import React, { Component } from "react";
 import "./AddTask.css";
 
 class TaskList extends Component {
+  minDate = new Date().toISOString().slice(0, 10);
   state = {
     text: "",
     checked: false,
-    date: "2019-10-26"
+    date: this.minDate
   };
+
+  handleDate = e => {
+    this.setState({
+      date: e.target.value
+    });
+  };
+
   render() {
+    let maxDate = this.minDate.slice(0, 4) * 1 + 1;
+    maxDate = maxDate + "-12-31";
     return (
       <div className="form">
         <input
@@ -22,8 +32,9 @@ class TaskList extends Component {
         <input
           type="date"
           value={this.state.date}
-          min="2019-07-15"
-          max="2022-12-31"
+          min={this.minDate}
+          max={maxDate}
+          onChange={this.handleDate}
         />
         <br />
         <button>Dodaj zadanie</button>
