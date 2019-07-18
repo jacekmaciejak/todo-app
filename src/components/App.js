@@ -4,6 +4,7 @@ import AddTask from "./AddTask";
 import TaskList from "./TaskList";
 
 class App extends Component {
+  counter = 6;
   state = {
     tasks: [
       {
@@ -73,8 +74,6 @@ class App extends Component {
     });
   };
   changeTaskStatus = id => {
-    console.log("change w komponencie App");
-
     const tasks = Array.from(this.state.tasks);
     tasks.forEach(task => {
       if (task.id === id) {
@@ -87,11 +86,31 @@ class App extends Component {
     });
   };
 
+  addTask = (text, date, important) => {
+    const task = {
+      id: this.counter,
+      text: text, //tekst z inputa
+      date: date, //tekst z inputa
+      important: important, //wartosc z inputa
+      active: true,
+      finishDate: null
+    };
+
+    this.counter++;
+    console.log(task, this.counter);
+
+    this.setState(prevState => ({
+      tasks: [...prevState.tasks, task]
+    }));
+
+    return true;
+  };
+
   render() {
     return (
       <div className="App">
         <h1>TODO APP</h1>
-        <AddTask />
+        <AddTask add={this.addTask} />
         <TaskList
           tasks={this.state.tasks}
           delete={this.deleteTask}
