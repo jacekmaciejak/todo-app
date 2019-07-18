@@ -34,7 +34,7 @@ class App extends Component {
         id: 3,
         text: "zagrac w cos",
         date: "2019 - 10 - 16",
-        important: true,
+        important: false,
         active: true,
         finishDate: null
       },
