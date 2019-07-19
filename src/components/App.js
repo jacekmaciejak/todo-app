@@ -17,7 +17,7 @@ class App extends Component {
       },
       {
         id: 1,
-        text: "zagrac w cos",
+        text: "zbudowac cos",
         date: "2019 - 10 - 16",
         important: false,
         active: true,
@@ -25,7 +25,7 @@ class App extends Component {
       },
       {
         id: 2,
-        text: "zagrac w cos",
+        text: "kupic w cos",
         date: "2019 - 10 - 16",
         important: true,
         active: true,
@@ -33,7 +33,7 @@ class App extends Component {
       },
       {
         id: 3,
-        text: "zagrac w cos",
+        text: "opowiedziec w cos",
         date: "2019 - 10 - 16",
         important: false,
         active: true,
@@ -41,7 +41,7 @@ class App extends Component {
       },
       {
         id: 4,
-        text: "zagrac w cos",
+        text: "wyniesc w cos",
         date: "2019 - 10 - 16",
         important: true,
         active: true,
@@ -49,7 +49,7 @@ class App extends Component {
       },
       {
         id: 5,
-        text: "zagrac w cos",
+        text: "posprzatac w cos",
         date: "2019 - 10 - 16",
         important: true,
         active: true,
